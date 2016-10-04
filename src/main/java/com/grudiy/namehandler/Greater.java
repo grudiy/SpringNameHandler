@@ -8,11 +8,11 @@ public class Greater {
     private NameProcessor nameProcessor;
 
     @Autowired
-    public Greater(NameProcessor nameProcessor) {
-        this.nameProcessor = nameProcessor;
+    public Greater(NameProcessor nameprocessor) {
+        this.nameProcessor = nameprocessor;
     }
 
     public void sayHello(){
-        System.out.println("Hello " + nameProcessor.capitalize(NameReader.read()));
+        System.out.println("Hello " + nameProcessor.process());
     }
 }

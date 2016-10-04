@@ -5,14 +5,14 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class NameProcessor {
-    private NameReader nameReader;
+    private NameReader nameRead;
 
     @Autowired
-    public NameProcessor(NameReader nameReader) {
-        this.nameReader = nameReader;
+    public NameProcessor(NameReader name) {
+        this.nameRead = name;
     }
 
-    public String capitalize(String s){ //capitalize Name
-        return s.toUpperCase();
+    public String process(){ //capitalize Name
+        return nameRead.getName().toUpperCase();
     }
 }
