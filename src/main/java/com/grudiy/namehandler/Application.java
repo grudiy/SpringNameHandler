@@ -10,9 +10,6 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 public class Application {
 
-    @Bean
-    User getUser(){ return new User(); }
-
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(Application.class);
         Greater greater = context.getBean(Greater.class);
