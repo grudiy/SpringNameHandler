@@ -10,8 +10,11 @@ import org.springframework.context.annotation.Configuration;
 public class Application {
 
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(Application.class);
-        Greater greater = context.getBean(Greater.class);
-        greater.sayHello();
+        while (true) {
+            ApplicationContext context = new AnnotationConfigApplicationContext(Application.class);
+            Greater greater = context.getBean(Greater.class);
+            greater.sayHello();
+        }
+
     }
 }
